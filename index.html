@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sign in</title>
+
+
+  <meta charset="utf-8">
+  <!--meta info-->
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/ico" href="images/favicon.ico">
+  <!--stylesheet include-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
+
+
+</head>
+
+<style>
+  #first {
+    width: 50%;
+    float: left;
+    height: 5%;
+    text-align: center;
+    justify-content: space-around;
+
+  }
+
+  #second {
+    width: 50%;
+    float: left;
+    height: 5%;
+    padding-right: 5% ;
+    padding-top:5%;
+    border-radius: 12;
+
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  .topnav {
+
+
+    overflow: hidden;
+    border-bottom: 0px solid white;
+  }
+
+  .topnav a {
+
+    color: white;
+    text-align: center;
+    padding: 2% 2% 2% 0%;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav div {
+
+    color: white;
+    text-align: center;
+    padding: 2% 2%;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+
+  .topnav a:hover {
+
+    color: white;
+  }
+
+  .topnav input[type=text] {
+    float: left;
+    padding: 0.5%;
+    padding-top: 1%;
+    padding-bottom: -1%;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    border: 1px solid white;
+    outline: none;
+  }
+
+  .text-animation input[type=text] {
+
+    padding: 0.5%;
+    padding-top: 1%;
+    padding-bottom: -1%;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: white;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    outline: none;
+  }
+
+  .text-animation input[type=password] {
+
+    padding: 0.5%;
+    padding-top: 1%;
+    padding-bottom: -1%;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: white;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .text-animation button {
+
+    padding: 0.5%;
+    padding-top: 1%;
+    padding-bottom: -1%;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    outline: none;
+  }
+
+  .text-animation button:focus {
+
+    outline: none;
+  }
+
+  .footer {
+
+
+
+    overflow: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+
+
+  }
+
+  body {
+    -ms-overflow-style: none;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("background.png");
+  }
+
+  .text-animation {
+
+
+    font-family: sans-serif;
+    opacity: 0;
+    transform: translateY(5em) rotateZ(-10deg);
+    transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+      opacity .3s .25s ease-out;
+    max-width: 600px;
+    width: 90%;
+    will-change: transform, opacity;
+  }
+
+  .text-animation.is-visible {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+
+  @media (max-width:360px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+   
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:815px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+      float: left;
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:414px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+    
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:411px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+    
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:320px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:375px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+      float: left;
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 80px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+    .mobile a {
+      font-size: 10px;
+    }
+
+    .mobile p {
+      font-size: 30px
+    }
+
+    .mobile #second {
+      width: 100%;
+    }
+
+    .mobile_first a {
+      font-size: 10px;
+    }
+
+    .mobile_first p {
+      font-size: 30px
+    }
+
+    .mobile_first #first {
+      width: 100%
+    }
+  }
+
+  @media (max-width:1192px) {
+    .topnav .mobile_view .mobile {
+      padding-left: -10%;
+      
+    }
+
+    .topnav .mobile_view .mobile_search {
+      width: 100px;
+      padding-left: -2px;
+    }
+
+    .first .text-animation .show-on-scroll .mobile {
+      font-size: 30px;
+    }
+
+  }
+
+  ::placeholder {
+    color: white;
+  }
+</style>
+
+<body style="background-image:url(background11.jpg);scroll-behavior: smooth;transition: 2s; background-repeat: none;">
+  <div style="background-color: rgba(3,3,3,0.7);">
+    <div class="topnav" style="padding-left: 5%; ">
+      <img src="2.png" style="height: 10%;width: 10%;  float: lef;padding-top:0%;">
+      <a class="active" href="homemajor.html" style="padding-left: 45%;">Home</a>
+      <a href="#contact" style="padding-left: 3%;">Contact</a>
+      <a href="#about" style="padding-left: 3%;">About</a>
+      <a href="#about" style="padding-left: 3%;">signup</a>
+    </div>
+  </div>
+
+
+  <div style="background-color: rgba(3,3,3,0.4);">
+    <br><br><br><br><br><br>
+    <div class="mobile_first">
+      <div id=first>
+        <p class="text-animation show-on-scroll mobile"
+          style="text-align: left;font-style:bold;padding-left: 10vw;font-size: 60px; color:white;"><a
+            style="font-size:120px ;font-family:Brush Script MT; ">W</a>elcome</p>
+
+        <p class="text-animation show-on-scroll"
+          style="text-align: center;padding-left: 10vw;font-size: 27px; color: white;">Here you can get the most
+          important notes for your engineering degree. Create your account today... </p><br><br><br><br><br>
+      </div>
+    </div>
+    <div class="mobile">
+      <div id=second style="padding-top: 5%;padding-bottom: 5%;padding-left: 5%;border-radius: 5%;">
+
+        <div>
+          <p class="text-animation show-on-scroll mobile"
+            style="text-align: left;font-style:bold;padding-left: 10vw;font-size: 20px; color:white;">Sign in</p>
+
+          <form method="post" action="connect.php" class="text-animation show-on-scroll"
+            style="text-align: center;padding-left: -30vw;font-size: 17px; color: white;"><a
+              style="background-color: none;"> <input type="text" placeholder="    Username..." name="username"
+                style="background-color: transparent;color: white;"></a>
+            <p method="post" action="connect.php" class="text-animation show-on-scroll"
+              style="text-align: center;padding-left: 4vw;font-size: 17px; color: white;padding-bottom: 5px;"><a
+                style="background-color: none;"> <input type="password" name="password" placeholder="    password..."
+                  style="background-color:transparent;color: white;"></p></a></p>
+          </form>
+
+          <a class="text-animation show-on-scroll" href="signup.html"
+            style="float: left; padding-right: 10%;padding-left: 30%; ">create an account</a><br>
+          <a class="text-animation show-on-scroll" href="signup.html"
+            style="float: left; padding-right: 10%;padding-left: 30%; ">forgot password</a><br>
+
+          <p method="post" action="connect.php" class="text-animation show-on-scroll"
+            style="text-align: center;padding-left: -30vw;font-size: 17px; color: white;"><a
+              style="background-color: none;"> <button style="background-color: white;">Sign in</button></form></a></p>
+        </div>
+      </div>
+    </div>
+    <div id="clear">
+      <br>
+    </div>
+
+    <br><br><br><br><br><br>
+
+
+
+
+
+  
+
+    <br><br><br><br><br><br>
+  </div></a>
+  <div style="background-color: rgba(3,3,3,0.7); ">
+    
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+        
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+
+
+  <!-- for sakthivel add the footer elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: white;">© 2020 Copyright:
+    
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+
+<script>
+  window.addEventListener('scroll', function () {
+    console.log("Scrollin'");
+  });
+  var scroll = window.requestAnimationFrame ||
+    function (callback) { window.setTimeout(callback, 1000 / 60) };
+  var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+  function loop() {
+
+    elementsToShow.forEach(function (element) {
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+  }
+  loop();
+  function isElementInViewport(el) {
+    // special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+      el = el[0];
+    }
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0
+        && rect.bottom >= 0)
+      ||
+      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      ||
+      (rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</html>
